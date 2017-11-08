@@ -1,0 +1,94 @@
+#include <gtk/gtk.h>
+#include <string> 
+
+GtkWidget	*label1;
+GtkWidget	*label2;
+GtkWidget	*label3;
+GtkWidget	*label4;
+GtkWidget	*label5;
+GtkWidget	*label6;
+
+using namespace std;
+
+void * thread_func(void *arg){
+	string str1,str2,str3;
+	while(1)
+	{
+		sleep(1);
+		FILE *fp;
+		char path[1024];
+		fp = popen("acpi -a", "r");
+		while (fgets(path, sizeof(path)-1, fp) != NULL) {
+   			str1 = path;
+			printf("%s", path);
+  		}
+		fp = popen("acpi", "r");
+		while (fgets(path, sizeof(path)-1, fp) != NULL) {
+   			str3 = str2 = path;
+			printf("%s", path);
+  		}
+
+		if ( str1.find("off-line") != std::string::npos )
+			str1 = "Батарея";
+		else
+			str1 = "AC";
+
+		size_t pos1 = str2.find("%");
+		str2 = str2.substr(pos1-3, 4);
+
+		if(str3.find != str3.npos)
+		{
+			size_t pos2 = str3.find("remaining")(pos2 !=0 )		str3 = pos2;
+//		str3 = str3.substr(pos2-9, 9);
+
+
+		gtk_label_set_label((GtkLabel*)label2, str1.c_str());
+		gtk_label_set_label((GtkLabel*)label4, str2.c_str());
+		gtk_label_set_label((GtkLabel*)label6, str3.c_str());
+		pclose(fp);
+	}
+}
+
+int main (int argc, char **argv)
+{
+	GtkBuilder  *builder; 							//объект, с помощью которого будет построен интерфейс пользователя
+	GtkWidget   *mainwindow;						//виджет - окно 
+						//виджет, с которым мы свяжем label в окне, для управления им
+	gtk_init(&argc, &argv);							//инициализируем gtk
+	builder = gtk_builder_new ();						//создаем новый GtkBuilder объект
+    	gtk_builder_add_from_file(builder, "glade.glade", NULL);		//загружаем описание интерфейса из XML файла
+	mainwindow = GTK_WIDGET(gtk_builder_get_object(builder, "mainwindow")); //связываем наше окно с окном из файла
+	label1 =  GTK_WIDGET(gtk_builder_get_object(builder, "TypePowerText"));
+	label3 =  GTK_WIDGET(gtk_builder_get_object(builder, "LevelPowerText"));
+	label5 =  GTK_WIDGET(gtk_builder_get_object(builder, "TimePowerText"));	
+	label2 =  GTK_WIDGET(gtk_builder_get_object(builder, "TypePower"));
+	label4 =  GTK_WIDGET(gtk_builder_get_object(builder, "LevelPower"));
+	label6 =  GTK_WIDGET(gtk_builder_get_object(builder, "TimePower"));
+	gtk_builder_connect_signals (builder, NULL);				//подключаем сигналы
+	gtk_label_set_label((GtkLabel*)label2, "Батарея/АС");
+	gtk_label_set_label((GtkLabel*)label4, "Уровень заряда.");
+	gtk_label_set_label((GtkLabel*)label6, "Время до полного разряда."); 			
+	gtk_label_set_label((GtkLabel*)label1, "Работает от:"); 		
+	gtk_label_set_label((GtkLabel*)label3, "Уровень заряда:"); 	
+	gtk_label_set_label((GtkLabel*)label5, "Время до полного разряда:"); 	
+
+	gtk_widget_show (mainwindow);     					//показываем окно
+
+int id1, result;
+    pthread_t thread1;
+id1= 1;
+result = pthread_create(&thread1, NULL, thread_func, &id1);
+    if (result != 0) {
+        perror("Создание первого потока!");
+        return EXIT_FAILURE;
+    }
+
+
+    	gtk_main();								//запускаем главный цикл приложения
+    	return 0;
+}
+
+/*void on_mainwindow_destroy (GtkObject *object, gpointer user_data)		//обработчик сигнала закрытия главного окна
+{
+    gtk_main_quit ();	//выйти из главного цикла
+}*/
