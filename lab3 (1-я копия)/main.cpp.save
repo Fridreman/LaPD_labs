@@ -11,9 +11,9 @@ GtkWidget	*label6;
 using namespace std;
 
 void * thread_func(void *arg){
+	string str1,str2,str3;
 	while(1)
 	{
-		string str1,str2,str3;
 		sleep(1);
 		FILE *fp;
 		char path[1024];
@@ -28,10 +28,6 @@ void * thread_func(void *arg){
 			printf("%s", path);
   		}
 
-		if(str2.find("unavailable") != std::string::npos)
-			continue;
-
-
 		if ( str1.find("off-line") != std::string::npos )
 			str1 = "Батарея";
 		else
@@ -39,37 +35,16 @@ void * thread_func(void *arg){
 
 		size_t pos1 = str2.find("%");
 		str2 = str2.substr(pos1-3, 4);
-		size_t pos2;
-		if(str3.find("remaining") != str3.npos)
+
+		if(str3.find != str3.npos)
 		{
-			pos2 = str3.find("remaining");
-		}
-		else
-		{
-			pos2 = str3.find("until");
-		}
-		str3 = str3.substr(pos2 -9,9);
+			size_t pos2 = str3.find("remaining")(pos2 !=0 )		str3 = pos2;
+//		str3 = str3.substr(pos2-9, 9);
+
 
 		gtk_label_set_label((GtkLabel*)label2, str1.c_str());
 		gtk_label_set_label((GtkLabel*)label4, str2.c_str());
 		gtk_label_set_label((GtkLabel*)label6, str3.c_str());
-
-
-		fp = popen("xprintidle", "r");
-                while (fgets(path, sizeof(path)-1, fp) != NULL) {
-                        str2 = path;
-                        printf("%s", path);
-                }
-		if(str1 == "Батарея")
-		{
-			printf("!!!!: %d",atoi(str2.c_str()));
-			if(atoi(str2.c_str()) >= 5000)
-				system("echo 5 >> /sys/class/backlight/intel_backlight/brightness");
-			else
-				system("echo 937 >> /sys/class/backlight/intel_backlight/brightness");
-		}
-		else
-			system("echo 937 >> /sys/class/backlight/intel_backlight/brightness");
 		pclose(fp);
 	}
 }
