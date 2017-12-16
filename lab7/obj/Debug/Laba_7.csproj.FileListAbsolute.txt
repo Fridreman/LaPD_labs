@@ -1,0 +1,15 @@
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\obj\Debug\Laba_7.csprojResolveAssemblyReference.cache
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\obj\Debug\BurnMedia.MainForm.resources
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\obj\Debug\Laba_7.Properties.Resources.resources
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\obj\Debug\Laba_7.csproj.GenerateResource.Cache
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\obj\Debug\Laba_7.csproj.CoreCompileInputs.cache
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\bin\Debug\Laba_7.exe.config
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\bin\Debug\Laba_7.exe.manifest
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\bin\Debug\Laba_7.application
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\bin\Debug\Laba_7.exe
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\bin\Debug\Laba_7.pdb
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\obj\Debug\Laba_7.TrustInfo.xml
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\obj\Debug\Laba_7.exe.manifest
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\obj\Debug\Laba_7.application
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\obj\Debug\Laba_7.exe
+C:\Users\dagge\Desktop\ИиПУ\LaPD_labs\lab7\obj\Debug\Laba_7.pdb
