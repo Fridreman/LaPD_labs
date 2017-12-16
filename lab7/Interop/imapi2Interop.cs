@@ -3867,59 +3867,7 @@ namespace IMAPI2.Interop
     public class MsftDiscFormat2DataClass
     {
     }
-
-    [ComImport]
-    [Guid("27354156-8F64-5B0F-8F00-5D77AFBE261E")]
-    [CoClass(typeof(MsftDiscFormat2EraseClass))]
-    public interface MsftDiscFormat2Erase : IDiscFormat2Erase, DiscFormat2Erase_Event
-    {
-    }
-
-    [ComImport]
-    [Guid("2735412B-7F64-5B0F-8F00-5D77AFBE261E")]
-    [ComSourceInterfaces("DDiscFormat2EraseEvents\0")]
-    [TypeLibType(TypeLibTypeFlags.FCanCreate), ClassInterface(ClassInterfaceType.None)]
-    public class MsftDiscFormat2EraseClass
-    {
-    }
-
-    [ComImport]
-    [CoClass(typeof(MsftDiscFormat2RawCDClass))]
-    [Guid("27354155-8F64-5B0F-8F00-5D77AFBE261E")]
-    public interface MsftDiscFormat2RawCD : IDiscFormat2RawCD, DiscFormat2RawCD_Event
-    {
-    }
-
-    [ComImport]
-    [Guid("27354128-7F64-5B0F-8F00-5D77AFBE261E")]
-    [ComSourceInterfaces("DDiscFormat2RawCDEvents\0")]
-    [TypeLibType(TypeLibTypeFlags.FCanCreate)]
-    [ClassInterface(ClassInterfaceType.None)]
-    public class MsftDiscFormat2RawCDClass
-    {
-    }
-
-    /// <summary>
-    /// Microsoft IMAPIv2 Track-at-Once Audio CD Writer
-    /// </summary>
-    [ComImport]
-    [Guid("27354154-8F64-5B0F-8F00-5D77AFBE261E")]
-    [CoClass(typeof(MsftDiscFormat2TrackAtOnceClass))]
-    public interface MsftDiscFormat2TrackAtOnce : IDiscFormat2TrackAtOnce, DiscFormat2TrackAtOnce_Event
-    {
-    }
-
-    [ComImport]
-    [TypeLibType(TypeLibTypeFlags.FCanCreate)]
-    [ComSourceInterfaces("DDiscFormat2TrackAtOnceEvents\0")]
-    [Guid("27354129-7F64-5B0F-8F00-5D77AFBE261E")]
-    [ClassInterface(ClassInterfaceType.None)]
-    public class MsftDiscFormat2TrackAtOnceClass
-    {
-    }
-
-
-    /// <summary>
+        /// <summary>
     /// Microsoft IMAPIv2 Disc Master
     /// </summary>
     [ComImport]
@@ -3943,8 +3891,7 @@ namespace IMAPI2.Interop
     public interface MsftDiscRecorder2 : IDiscRecorder2
     {
     }
-
-
+    
     [ComImport]
     [Guid("2735412D-7F64-5B0F-8F00-5D77AFBE261E")]
     [TypeLibType(TypeLibTypeFlags.FCanCreate)]
@@ -3952,35 +3899,7 @@ namespace IMAPI2.Interop
     public class MsftDiscRecorder2Class 
     {
     }
-
-    [ComImport]
-    [Guid("27354151-7F64-5B0F-8F00-5D77AFBE261E")]
-    [CoClass(typeof(MsftMultisessionSequentialClass))]
-    public interface MsftMultisessionSequential : IMultisessionSequential
-    {
-    }
-
-    [ComImport]
-    [Guid("27354122-7F64-5B0F-8F00-5D77AFBE261E")]
-    [ClassInterface(ClassInterfaceType.None)]
-    public class MsftMultisessionSequentialClass
-    {
-    }
-
-    [ComImport]
-    [Guid("25983550-9D65-49CE-B335-40630D901227")]
-    [CoClass(typeof(MsftRawCDImageCreatorClass))]
-    public interface MsftRawCDImageCreator : IRawCDImageCreator
-    {
-    }
-
-    [ComImport]
-    [Guid("25983561-9D65-49CE-B335-40630D901227")]
-    [TypeLibType(TypeLibTypeFlags.FCanCreate)]
-    [ClassInterface(ClassInterfaceType.None)]
-    public class MsftRawCDImageCreatorClass
-    {
-    }
+     
 
     [ComImport]
     [Guid("27354135-7F64-5B0F-8F00-5D77AFBE261E")]
@@ -4140,20 +4059,7 @@ namespace IMAPI2.Interop
     {
     }
 
-    [ComImport]
-    [Guid("6CA38BE5-FBBB-4800-95A1-A438865EB0D4")]
-    [CoClass(typeof(MsftIsoImageManagerClass))]
-    public interface MsftIsoImageManager : IIsoImageManager
-    {
-    }
-
-    [ComImport]
-    [ClassInterface(ClassInterfaceType.None)]
-    [Guid("CEEE3B62-8F56-4056-869B-EF16917E3EFC")]
-    [TypeLibType(TypeLibTypeFlags.FCanCreate)]
-    public class MsftIsoImageManagerClass
-    {
-    }
+    
 
     [ComImport]
     [Guid("2C941FD5-975B-59BE-A960-9A2A262853A5")]
