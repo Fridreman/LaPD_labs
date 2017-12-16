@@ -35,6 +35,8 @@ namespace Getting_Win_Devices
 
         public void ChangeConnection(string method)
         {
+            var device1 = new ManagementObjectSearcher("SELECT * FROM Win32_PNPEntity").Get()
+                .OfType<ManagementObject>();
             var device = new ManagementObjectSearcher("SELECT * FROM Win32_PNPEntity").Get().OfType<ManagementObject>()
                 .FirstOrDefault(x => x["DeviceID"].ToString().Equals(DevicePath));
             device.InvokeMethod(method, new object[]{ false });

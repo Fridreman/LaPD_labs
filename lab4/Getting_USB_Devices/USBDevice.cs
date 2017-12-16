@@ -27,7 +27,6 @@ namespace Getting_USB_Devices
 
         public bool Eject()
         {
-            var ejectedDevice1 = new VolumeDeviceClass().ToList();
             var ejectedDevice = new VolumeDeviceClass().SingleOrDefault(v => v.LogicalDrive == this.Name.Remove(2));
             ejectedDevice.Eject(false);
             ejectedDevice = new VolumeDeviceClass().SingleOrDefault(v => v.LogicalDrive == this.Name.Remove(2));
