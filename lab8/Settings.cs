@@ -40,7 +40,7 @@ namespace Laba_8
             var tempList = content.ToList();
             for (int i = 0; i < tempList.Count; i++)
             {
-                tempList[i] = (char)(tempList[i] + 1);
+                tempList[i] = (char)(tempList[i] + 3);
             }
             return string.Join("", tempList);
         }
@@ -50,7 +50,7 @@ namespace Laba_8
             var tempList = content.ToList();
             for (int i = 0; i < tempList.Count; i++)
             {
-                tempList[i] = (char)(tempList[i] - 1);
+                tempList[i] = (char)(tempList[i] - 3);
             }
             return string.Join("", tempList);
         }

