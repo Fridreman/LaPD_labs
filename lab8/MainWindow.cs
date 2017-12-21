@@ -19,16 +19,16 @@ namespace Laba_8
         private void ConfigInit()
         {
             _config = _tempConfig.UpdateProgram();
-            hooksMode.Checked = _config.IsHooks;
-            email.Text = _config.Email;
+            hooksMode.Checked = _config.isHooks;
+            Email.Text = _config.Email;
             fileSize.Value = _config.FileSize > 5000 ? _config.FileSize : 5000;
             hideMode.Checked = _config.HideCheck;
         }
 
         private void SaveSettingsButtonClick(object sender, EventArgs e)
         {
-            _config.Email = email.Text;
-            _config.IsHooks = hooksMode.Checked;
+            _config.Email = Email.Text;
+            _config.isHooks = hooksMode.Checked;
             _config.FileSize = (long) fileSize.Value;
             _config.HideCheck = hideMode.Checked;
 

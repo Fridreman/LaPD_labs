@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.label1 = new System.Windows.Forms.Label();
-            this.email = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.fileSize = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,12 +52,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Email:";
             // 
-            // email
+            // Email
             // 
-            this.email.Location = new System.Drawing.Point(124, 69);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(186, 22);
-            this.email.TabIndex = 2;
+            this.Email.Location = new System.Drawing.Point(124, 69);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(186, 22);
+            this.Email.TabIndex = 2;
             // 
             // label3
             // 
@@ -174,7 +174,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.fileSize);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.email);
+            this.Controls.Add(this.Email);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -192,7 +192,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown fileSize;
         private System.Windows.Forms.Label label9;

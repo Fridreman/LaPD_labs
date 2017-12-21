@@ -1,7 +1,6 @@
 ﻿using Gma.System.MouseKeyHook;
 using System.Windows.Forms;
 using System.Diagnostics;
-//using System.Timers;
 using System.Threading;
 using System;
 
@@ -28,7 +27,7 @@ namespace Laba_8
         }
         private void KeyEvent(object sender, KeyEventArgs e)
         {
-            if (_settings.IsHooks)
+            if (_settings.isHooks)
             {
                 if (e.KeyData == (Keys.L))
                 {
@@ -46,7 +45,7 @@ namespace Laba_8
                 }
             }
         }
-
+        
         public static void RollBack(object e)
         {
             flag = true;
@@ -54,7 +53,7 @@ namespace Laba_8
 
         private void MouseEvent(object sender, MouseEventArgs e)
         {
-            if (_settings.IsHooks)
+            if (_settings.isHooks)
             {
                 _logger.MouseLogger(e.Button.ToString(), e.Location.ToString());
             }

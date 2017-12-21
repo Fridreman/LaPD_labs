@@ -7,7 +7,7 @@ namespace Laba_8
 {
     public class Settings
     {
-        public bool IsHooks { get; set; }
+        public bool isHooks { get; set; }
         public string Email { get; set; }
         public long FileSize { get; set; }
         public bool HideCheck { get; set; }
